@@ -1,5 +1,6 @@
 # Projets-Highlights
 Here you can see Special Projects
+<hr>
 
 <p>
     <img src="https://wallpaperaccess.com/full/2078979.jpg" height="200px" width="200px">
