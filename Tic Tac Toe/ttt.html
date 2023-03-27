@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tic-Tac-Toe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&family=Bebas+Neue&family=Berkshire+Swash&family=Bree+Serif&family=Courgette&family=Creepster&family=Lobster&family=Michroma&family=Monoton&family=Oleo+Script+Swash+Caps&family=Orbitron:wght@500&family=Poppins:wght@500&family=Roboto+Slab:wght@300&family=Secular+One&family=Share+Tech+Mono&family=Ubuntu+Condensed&family=Unbounded:wght@500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            overflow: hidden;
+            place-items: center;
+            background: url("./TTT love balloon.webp");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .inps {
+            cursor: pointer;
+            display: grid;
+            grid-gap: 0.5rem;
+            padding: 0.5rem;
+            box-shadow: 5px 5px #00000077;
+            backdrop-filter: blur(50px);
+
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 150px);
+        }
+
+        span {
+            display: grid;
+            place-items: center;
+            background: transparent;
+            outline: 1px solid white;
+            text-transform: capitalize;
+            font-size: clamp(20px, 10vw, 80px);
+            font-weight: 500;
+        }
+
+        span:hover {
+            color: white;
+            background: rgba(0, 0, 255, 0.384);
+        }
+
+        button {
+            font-size: x-large;
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+            font-family: 'Bree Serif', serif;
+            box-shadow: 2px 2px 5px black;
+        }
+
+        h2 {
+            color: white;
+            letter-spacing: 0.2rem;
+            backdrop-filter: blur(100px);
+            text-transform: capitalize;
+            font-family: 'Bree Serif', serif;
+            text-shadow: 0 0 10px white,
+                0 0 5px blueviolet;
+        }
+
+        @media screen and (max-width: 1050px) {
+            .inps {
+                grid-template-rows: repeat(3, 120px);
+            }
+        }
+
+        @media screen and (max-width: 950px) and (min-width: 600px) {
+            .inps {
+                height: 700px;
+                grid-template-rows: repeat(3, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 600px) and (min-width: 550px) {
+            .inps {
+                height: 600px;
+                grid-template-rows: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container col-lg-6 col-md-8 col-sm-12">
+        <h2 class="text-center mx-auto my-3  py-2" id="announcement">Tic Tac Toe</h2>
+
+        <div class="inps border border-2 border-dark mb-3 mx-auto">
+            <span class="inp inp-1"></span>
+            <span class="inp inp-2"></span>
+            <span class="inp inp-3"></span>
+            <span class="inp inp-4"></span>
+            <span class="inp inp-5"></span>
+            <span class="inp inp-6"></span>
+            <span class="inp inp-7"></span>
+            <span class="inp inp-8"></span>
+            <span class="inp inp-9"></span>
+        </div>
+
+        <button class="py-2 px-5 rounded mx-auto d-block text-light bg-primary" id="reset">reset</button>
+</body>
+
+<script type="text/javascript" defer>
+
+    let inpSpins = document.querySelectorAll('.inp');
+    inpSpins.forEach((e) => {
+        e.addEventListener('click', check);
+    })
+
+    // declaring audio names
+    var interface, error, winning;
+
+    // value checker
+    function check() {
+        if (this.textContent == 'x' || this.textContent == 'o') {
+            error = new Audio("./error.mp3");
+            error.play();
+        } else {
+            interface = new Audio("./interface- TTT.mp3");
+            interface.currentTime = 0.2;
+            this.textContent = turn();
+            interface.play();
+            user_win();
+        }
+    }
+
+    // user Turns
+    let count = 0;
+    function turn() {
+        count += 1;
+        let user = count % 2 == 0 ? 'x' : 'o';
+        return user;
+    }
+
+    // user Winning
+    function user_win() {
+        let wins = [
+            [0, 1, 2],
+            [3, 4, 5],
+            [6, 7, 8],
+            [0, 3, 6],
+            [1, 4, 7],
+            [2, 5, 8],
+            [0, 4, 8],
+            [2, 4, 6]
+        ]
+
+        wins.forEach((e) => {
+            if ((inpSpins[e[0]].textContent === inpSpins[e[1]].textContent) && (inpSpins[e[0]].textContent === inpSpins[e[2]].textContent) && (inpSpins[e[0]].textContent !== "")) {
+
+                announcement.textContent = `user ${inpSpins[e[0]].textContent} won!`;
+                winning = new Audio("./level-passed.mp3");
+                interface.volume = 0;
+                winning.play();
+
+                for (let i of inpSpins) {
+                    i.removeEventListener('click', check);
+                }
+            }
+        })
+    }
+
+    // reseting Game
+    reset.addEventListener('click', () => {
+        window.location.reload();
+    })
+
+</script>
+
+</html>
