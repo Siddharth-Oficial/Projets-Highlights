@@ -1,0 +1,406 @@
+<!-- creating structure with bootstrap -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature</title>
+
+    <!-- css file link -->
+    <link rel="stylesheet" href="nature.css" type="text/css">
+
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+
+    <!-- google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Shantell+Sans:ital,wght@1,300&family=Share+Tech+Mono&family=Unbounded:wght@500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- creating navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <span class="navbar-brand ms-2 ms-lg-5 text-light">Nature</span>
+
+            <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto me-5 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home"><i class="bi bi-house"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery"><i class="bi bi-images"></i> Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#events"><i class="bi bi-calendar-event-fill"></i> Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#lovers"><i class="bi bi-valentine2"></i> Lovers</a>
+                    </li>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- home -->
+    <div id="carouselExampleCaptions home" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1" id="toggle"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./Images/Welcome Nature.jpeg" class="d-block w-100">
+                <div class="carousel-caption d-md-block rounded-pill mb-5">
+                    <h5>Welcome to nature-zone</h5>
+                    <p>Explore the Nature Naturally Positive and Freely.</p>
+
+                    <button class="rounded py-2 px-3 mx-2" style="background: deeppink; border: none;">Nature
+                        Is</button>
+                    <button class="rounded py-2 px-3 mx-2" style="background: red; border: none;">Naturally</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Gallery -->
+    <div class="container py-5" id="gallery">
+        <div class="container text-center">
+            <h2 class="head">Nature has incredible beauty</h2>
+            <p class="mb-5 head col-12 col-md-8 col-lg-8 mx-auto"><i>
+                    Nature has been found to have a calming quality on our stress levels. Beautiful natural
+                    surroundings
+                    and scenery can feel like worlds away from our home and work life and consequently causes us to
+                    put
+                    any associated stress on the back burner.</i></p>
+        </div>
+
+        <div class="row">
+            <div class="card my-3 py-3 mx-auto" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="./Images/Beauty Ecosystem.jpg" class="rounded-start w-100 h-100">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Eco-System</h5>
+                            <p class="card-text">An ecosystem is a natural unit consisting of all plants, animals
+                                and micro-organisms in an area functioning together with all of the non-living
+                                physical (abiotic) factors of the environment.</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 2 mins ago</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card my-3 py-3 mx-auto" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="./Images/Beauty Atmosphare.jpg" class="rounded-start w-100 h-100">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Climatic-Atmosphere</h5>
+                            <p class="card-text">The atmosphere of the Earth serves as a key factor in sustaining
+                                the planetary ecosystem. The thin layer of gases that envelops the Earth is held in
+                                place by the planet's gravity.</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 5 mins ago</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card my-3 py-3 mx-auto" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="./Images/Beauty Oceans.jpeg" class="rounded-start w-100 h-100">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Oceans & Seas</h5>
+                            <p class="card-text">An ocean is a major body of saline water, and a component of the
+                                hydrosphere. Approximately 71% of the surface of the Earth (an area of some 362
+                                million square kilometers) is covered by ocean, a continuous body of water that is
+                                customarily divided into several principal oceans and smaller seas.</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 2 days ago</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card my-3 py-3 mx-auto" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="./Images/Beauty Rivers.jpg" class="rounded-start w-100 h-100">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Rivers</h5>
+                            <p class="card-text">A river is a natural watercourse, usually freshwater, flowing
+                                toward an ocean, a lake, a sea or another river. A few rivers simply flow into the
+                                ground and dry up completely without reaching another body of water.</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card my-3 py-3 mx-auto" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="./Images/Beauty WaterFall.jpg" class="rounded-start w-100 h-100">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">WaterFalls</h5>
+                            <p class="card-text">A waterfall is a point in a river or stream where water flows over
+                                a vertical drop or a series of steep drops. Waterfalls also occur where meltwater
+                                drops over the edge of a tabular iceberg or ice shelf.</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card my-3 py-3 mx-auto" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="./Images/Beauty Lakes.jpeg" class="rounded-start w-100 h-100">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Lakes & Ponds</h5>
+                            <p class="card-text">A lake (from Latin lacus) is a terrain feature, a body of water
+                                that is localized to the bottom of basin. A body of water is considered a lake when
+                                it is inland, is not part of an ocean, and is larger and deeper than a pond. A pond
+                                is a body of standing water, either natural or man-made, that is usually smaller
+                                than a lake.</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 2 days ago</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Events -->
+    <div class="container col-md-8 mx-auto my-3 py-5" id="events">
+        <div class="container text-center">
+            <h2 class="head">Nature & events</h2>
+            <p class="mb-5 head"><i>A natural disaster or an event can cause loss of life or damage property, and
+                    typically leaves some economic damage in its wake. The severity of the damage depends on the
+                    affected population's resilience and on the infrastructure available.</i></p>
+        </div>
+
+        <div class="row">
+            <div class="card premiure mx-auto my-5 py-2" style="width: 18rem;">
+                <img src="./Images/earth quakes.jpg" class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text">An earthquake is the result of a sudden release of energy in the Earth's
+                        crust
+                        that creates seismic waves. At the Earth's surface, earthquakes manifest themselves by
+                        vibration, shaking, and sometimes displacement of the ground.</p>
+                </div>
+            </div>
+
+            <div class="card premiure mx-auto my-5 py-2" style="width: 18rem;">
+                <img src="./Images/wild fires.jpg" class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text">Wildfires are large fires which often start in wildland areas. Common
+                        causes
+                        include lightning and drought but wildfires may also be started by human negligence or
+                        arson.
+                        They can threat to humans and property, as well as wildlife.</p>
+                </div>
+            </div>
+
+            <div class="card premiure mx-auto my-5 py-2" style="width: 18rem;">
+                <img src="./Images/volcano erruption.jpg" class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text">Volcanoes can cause widespread destruction and consequent disaster in
+                        several
+                        ways. One hazard is the volcanic eruption itself, with the force of the explosion and
+                        falling
+                        rocks able to cause harm. Lava may be released.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Nature lovers  -->
+    <div class="container py-5" id="lovers">
+        <div class="container text-center">
+            <h2 class="head">Nature lovers</h2>
+            <p class="mb-5 head col-12 col-md-8 col-lg-8 mx-auto"><i>Take a moment to close your eyes and consider
+                    the
+                    sights, sounds, and smells that you imagine when you think about being in nature. a “nature
+                    lover”
+                    is someone who thrives on spending time in the outdoors and observing wild animals and
+                    plants.</i>
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="card my-3 py-3 mx-auto" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="./Images/Rock Climbing.jpg" class="rounded-start w-100 h-100">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Rock-Climbing</h5>
+                            <p class="card-text">Rock climbing is a sport in which participants climb up, across, or
+                                down natural rock formations. The goal is to reach the summit of a formation or the
+                                endpoint of a usually pre-defined route without falling.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card my-3 py-3 mx-auto" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="./Images/Mountain-Biking.jpg" class="rounded-start w-100 h-100">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Mountain-Biking</h5>
+                            <p class="card-text">Mountain biking is a sport of riding bicycles off-road, often over
+                                rough terrain, usually using specially designed mountain bikes. Mountain bikes share
+                                similarities with other bikes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card my-3 py-3 mx-auto" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="./Images/animal love.jpg" class="rounded-start w-100 h-100">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Animal-Love</h5>
+                            <p class="card-text">Emotion is defined as any mental experience with high intensity and
+                                high hedonic content. The existence and nature of emotions in non-human animals are
+                                believed to be correlated with those of humans.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card my-3 py-3 mx-auto" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="./Images/nature photography.webp" class="rounded-start w-100 h-100">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Wild-Shoot</h5>
+                            <p class="card-text">Wildlife photography isc oncerned with documenting various forms of
+                                wildlife in their natural habitat. some animals and birds are difficult to approach
+                                and
+                                thus a knowledge of the animal's and birds behavior is needed in order to be able to
+                                predict its actions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card my-3 py-3 mx-auto" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="./Images/Paragliding wildly.webp" class="rounded-start w-100 h-100">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Paragliding</h5>
+                            <p class="card-text">Paragliding is the recreational and competitive adventure sport of
+                                flying paragliders: lightweight, free-flying. The pilot sits in a harness or lies
+                                supine
+                                in a cocoon-like 'pod' suspended below a fabric wing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card my-3 py-3 mx-auto" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="./Images/Wild Hiking.jpeg" class="rounded-start w-100 h-100">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Mountain-Hiking</h5>
+                            <p class="card-text">mountaineering, also called mountain climbing, the sport of
+                                attaining,
+                                or attempting to attain, high points in mountainous regions, mainly for the pleasure
+                                of
+                                the climb. Hiking is a long, vigorous walk</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Disclaimer -->
+    <div class="container-fluid py-5 text-center" id="disclaimer">
+        <h2><i class="bi bi-flower1"></i> Nature is Naturally <i class="bi bi-flower1"></i></h2>
+        <p class="col-6 col-md-4 col-lg-4 mx-auto">
+            Start working with , the environmental design, give efforts, and easy customization making them more
+            ingredientive and beautiful. <br> [keep safe stay safe]
+
+        </p>
+        <p>Copyright 2023 © Nature <br> Made with Nature Love from Deep Heart.</p>
+    </div>
+
+</body>
+
+</html>
