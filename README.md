@@ -3,7 +3,7 @@ Here you can see Special Projects
 <hr>
 
 <p align="center">
-    <img src="https://wallpaperaccess.com/full/2078979.jpg" height="200px" width="300px">
+    <img src="https://raw.githubusercontent.com/Siddharth-Oficial/Projets-Highlights/main/Tic%20Tac%20Toe/TTT%20love%20balloon.webp" height="200px" width="300px">
     <h4 align="center"><a href="https://siddharth-oficial.github.io/Projets-Highlights/Tic Tac Toe/ttt.html" target="_blank"> Project : TIC TAC TOE </a></h4>
 </p>
 
