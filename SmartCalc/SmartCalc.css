@@ -1,0 +1,239 @@
+/* =====================================================
+    initializing CSS custom
+===================================================== */
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    position: relative;
+    transition: 0.2s;
+    color: white;
+}
+
+/* =====================================================
+    Customizing HTML body
+===================================================== */
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ_twO3lkc9p1ibkRQakmPXaTBmnrhIagQ9g&usqp=CAU");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* =====================================================
+    Customizing some important ingredients
+===================================================== */
+
+
+.fs-2 {
+    letter-spacing: 0.2rem;
+}
+
+.bg-orchid {
+    background: orangered;
+}
+
+.bg-black {
+    background: black;
+}
+
+.bg-green {
+    background: green;
+}
+
+input {
+    border: none;
+    font-weight: 700;
+    border-bottom: 1px solid black;
+    background: #80808079;
+}
+
+input:focus {
+    outline: none;
+}
+
+input::placeholder {
+    color: #ffffffde;
+}
+
+
+/* =====================================================
+    Customizing cover of calculator
+===================================================== */
+
+.cover {
+    overflow: hidden;
+    width: 50vw;
+    height: 80vh;
+    min-width: 300px;
+    border-radius: 1.5rem;
+    box-shadow: 5px 5px 10px black;
+}
+
+/* =====================================================
+    Customizing Search bar and button
+===================================================== */
+
+
+.searchBar {
+    padding: 1rem 0.5rem;
+}
+
+#searchEngine {
+    font-size: 80%;
+    padding-left: 1rem;
+    width: calc(100% - 60px);
+    height: 50px;
+}
+
+#searchEngine::-webkit-search-cancel-button {
+    margin-right: 5%;
+    font-size: 120%;
+    opacity: 0.8;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    width: 50px;
+    float: right;
+    height: 50px;
+    font-size: 120%;
+    font-weight: 900;
+    border-radius: 100%;
+    background: blue;
+}
+
+button.search-active {
+    box-shadow: 0 0 20px 5px black;
+}
+
+button.search-active::after {
+    content: "";
+    inset: -5px;
+    border-radius: 100%;
+    position: absolute;
+    background: transparent;
+    border: 5px solid;
+    border-top-color: white;
+    border-bottom-color: white;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    animation: brot 10s linear infinite;
+}
+
+@keyframes brot {
+    50% {
+        rotate: 2turn;
+    }
+}
+
+
+/* =====================================================
+    Customizing calculator body
+===================================================== */
+
+
+#calc {
+    width: 100%;
+    height: 100px;
+    padding: 0.5rem 1rem;
+    font-size: 105%;
+}
+
+#calc::placeholder {
+    font-size: 110%;
+}
+
+.calcWrap {
+    inset: 0%;
+    display: grid;
+    position: absolute;
+    place-items: center;
+    font-size: x-large;
+    letter-spacing: 0.1rem;
+    backdrop-filter: blur(20px);
+    font-family: 'Rubik Pixels', cursive;
+    text-shadow: 0 0 10px black;
+    animation: wrap-out 4s linear 1;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+
+@keyframes wrap-out {
+
+    50%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(100%) scale(0);
+    }
+}
+
+
+/* =====================================================
+    Customizing calculator controls
+===================================================== */
+
+
+.calcControls {
+    width: 100%;
+    height: calc(100% - (3rem + 50px + 100px));
+    padding: .8rem 1rem;
+
+    display: flex;
+    flex-flow: column;
+}
+
+.row {
+    flex-grow: 1;
+    display: flex;
+}
+
+.row span {
+    cursor: pointer;
+    flex-basis: 1;
+    display: grid;
+    font-size: 150%;
+    place-items: center;
+    flex-basis: calc(100% / 3);
+    outline: 1px solid white;
+    box-shadow: 0 0 10px black;
+    font-family: 'Merienda', cursive;
+}
+
+.row-5 span:nth-child(1) {
+    flex-basis: calc(100% / 2);
+}
+
+
+/* =====================================================
+    Adjusting media queries for devices
+===================================================== */
+
+
+/* Medium devices */
+@media only screen and (max-width: 768px) {
+    .cover {
+        width: 85%;
+    }
+}
+
+
+/* Small devices */
+@media only screen and (max-width: 576px) {
+    .cover {
+        width: 90%;
+    }
+
+    .row span {
+        font-size: 120%;
+    }
+}
